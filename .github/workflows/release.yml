@@ -11,4 +11,4 @@ jobs:
         type: 'zip'
         filename: 'gamesdata.zip'
         exclusions: '*.git*'
-        path: '/*games/*'
+        path: 'games'
