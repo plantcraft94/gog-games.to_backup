@@ -1,13 +1,10 @@
 name: Create Archive
-on:
-  push:
-    tags:
-      - "*"
+on: push
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v4
     - name: Archive Release
       uses: thedoctor0/zip-release@0.7.5
       with:
@@ -19,4 +16,7 @@ jobs:
       uses: softprops/action-gh-release@v2.0.4
       with:
           files: gamesdata.zip
+          token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+          tag_name: github.ref
+          make_latest: true
             
