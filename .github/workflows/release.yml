@@ -19,5 +19,5 @@ jobs:
       uses: ncipollo/release-action@v1.14.0
       with:
         artifacts: "gamesdata.zip"
-        tags: 'Release'
+        token: ${{ secrets.GITHUB_TOKEN }}
             
