@@ -12,8 +12,8 @@ jobs:
         filename: 'gamesdata.zip'
         exclusions: '*.git*'
         path: 'games'
-    - name: Upload Release
-      uses: ncipollo/release-action@v1.12.0
+    - name: Create Release
+      uses: ncipollo/release-action@v1.14.0
       with:
-        artifacts: 'gamesdata.zip'
-        token: ${{ secrets.GITHUB_TOKEN }}
+        artifacts: "gamesdata.zip"
+            
