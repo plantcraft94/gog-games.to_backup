@@ -15,7 +15,6 @@ jobs:
     - name: GH Release
       uses: softprops/action-gh-release@v2.0.4
       with:
-          token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
           files: gamesdata.zip
           tag_name: github.ref
             
